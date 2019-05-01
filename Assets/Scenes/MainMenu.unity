@@ -804,9 +804,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsParent: {fileID: 1089110428}
   Levels:
-  - {fileID: 11400000, guid: a8925a33beaaa8c4c90d931fffa3ecf0, type: 2}
-  - {fileID: 11400000, guid: afa23bcb309932141b3b2f61cef7690e, type: 2}
-  - {fileID: 11400000, guid: 9eaceb6eb515bcd45a6351af2630f96e, type: 2}
+  - {fileID: 11400000, guid: dd6c8116c4475a34f835ddb8c51bb4c0, type: 2}
+  - {fileID: 11400000, guid: 6e88890e06b1b8947a8f70256e8a2e6b, type: 2}
+  - {fileID: 11400000, guid: d62c9140744167f4c9155c3daebad4b7, type: 2}
+  - {fileID: 11400000, guid: 63fd834d79e7c974990e6bc29c3622c6, type: 2}
   TotalCoinsInGame: 0
   TotalCollectedCoins: 0
 --- !u!1 &896322128
