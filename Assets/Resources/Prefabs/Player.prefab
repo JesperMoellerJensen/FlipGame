@@ -142,6 +142,7 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 256
+  CanMove: 0
   _speed: 8
   _jumpForce: 15
 --- !u!50 &2821441701926648456

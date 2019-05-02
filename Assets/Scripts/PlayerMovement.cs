@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	public List<AudioClip> AudioClips = new List<AudioClip>();
 	public LayerMask GroundMask;
+	public bool CanMove;
 
 	[SerializeField] private float _speed;
 	[SerializeField] private float _jumpForce;
@@ -24,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
+		if (CanMove == false)
+		{
+			return;
+		}
+
 		_moveDir = Input.GetAxisRaw("Horizontal");
 
 		if (Input.GetButtonDown("Jump") && CheckIfOnGround())
@@ -36,6 +43,19 @@ public class PlayerMovement : MonoBehaviour
 	{
 		_body.velocity = new Vector2(_moveDir * _speed, _body.velocity.y);
 		CheckIfOnGround();
+	}
+
+	public void EnterPortal()
+	{
+		StartCoroutine(CameraShake());
+	}
+	IEnumerator CameraShake()
+	{
+		FindObjectOfType<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>()
+			.m_AmplitudeGain = 0.5f;
+		yield return new WaitForSeconds(0.3f);
+		FindObjectOfType<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>()
+			.m_AmplitudeGain = 0;
 	}
 
 	public void ExitPortal(float InVelY)

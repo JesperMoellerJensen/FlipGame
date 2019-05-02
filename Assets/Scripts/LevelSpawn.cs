@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class LevelSpawn : MonoBehaviour
 {
-	private void Start()
+	private void Awake()
 	{
 		SpawnPlayer();
 	}
@@ -16,6 +16,6 @@ public class LevelSpawn : MonoBehaviour
 		GameObject player = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
 		FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
 
-		FindObjectOfType<LevelManager>().StartLevel();
+		FindObjectOfType<LevelManager>().InitializeLevel();
 	}
 }

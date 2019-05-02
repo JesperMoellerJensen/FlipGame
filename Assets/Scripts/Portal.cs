@@ -9,14 +9,14 @@ public class Portal : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		PlayerBehaivor player = collider?.GetComponent<PlayerBehaivor>();
+		PlayerMovement playerMovement = collider?.GetComponent<PlayerMovement>();
 
-		if(player != null)
+		if (playerMovement != null)
 		{
 			Rigidbody2D body = collider.GetComponent<Rigidbody2D>();
 			InVelY = body.velocity.y;
 			FireParticle(body);
-			player.EnterPortal();
+			playerMovement.EnterPortal();
 		}
 	}
 

@@ -24,10 +24,16 @@ public class LevelManager : MonoBehaviour
 		_coinCounterText = GameObject.FindGameObjectWithTag("Counter").GetComponent<TextMeshProUGUI>();
 		_coinCounterText.text = string.Format("{0:00}/{1:00}", CurrentCoins, LevelData.TotalCoins);
 	}
-	public void StartLevel()
+	public void InitializeLevel()
 	{
 		Time.timeScale = 1;
 		_stopwatch = new Stopwatch();
+		Invoke("StartLevel", 0.5f);
+	}
+
+	public void StartLevel()
+	{
+		FindObjectOfType<PlayerMovement>().CanMove = true;
 		_stopwatch.Start();
 		InvokeRepeating("UpdateTime", 0, 0.01f);
 	}
