@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelData_08
   m_EditorClassIdentifier: 
   RequiredCoins: 10
-  Completed: 0
+  Completed: 1
   TotalCoins: 3
   CoinsCollected: 0
   FastestTime: 0
