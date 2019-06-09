@@ -17,6 +17,7 @@ public class CameraZoom : MonoBehaviour
 	{
 		_playerBody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
 		_camera = GetComponent<CinemachineVirtualCamera>();
+		_camera.m_Lens.OrthographicSize = MinZoom;
 	}
 
 	private void LateUpdate()

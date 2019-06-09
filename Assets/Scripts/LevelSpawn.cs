@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class LevelSpawn : MonoBehaviour
 {
-	private void Awake()
+	private void Start()
 	{
 		SpawnPlayer();
 	}

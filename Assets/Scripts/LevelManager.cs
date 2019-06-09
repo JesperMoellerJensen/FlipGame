@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,6 +17,17 @@ public class LevelManager : MonoBehaviour
 	private TextMeshProUGUI _timerText;
 	private TextMeshProUGUI _coinCounterText;
 	private Stopwatch _stopwatch;
+
+	private void Awake()
+	{
+		GameObject mainCamera = Resources.Load<GameObject>("Prefabs/MainCamera");
+		GameObject virtualCamera = Resources.Load<GameObject>("Prefabs/VirtualCamera");
+		GameObject HUD = Resources.Load<GameObject>("Prefabs/HUD");
+
+		Instantiate(mainCamera);
+		Instantiate(virtualCamera);
+		Instantiate(HUD);
+	}
 
 	private void Start()
 	{
