@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e009c4e59198574aadbe77df61dd84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelData: {fileID: 11400000, guid: 17812ff575b00c643871a3882b45afdf, type: 2}
+  LevelData: {fileID: 11400000, guid: 708677bcfac91c64eb8b21c29d014382, type: 2}
   CurrentCoins: 0
   TimeElapsed: 0
 --- !u!4 &849806779
@@ -1940,12 +1940,12 @@ PrefabInstance:
       propertyPath: ActivationSpeed
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 6183133552220493318, guid: 86431d44920f5c647a4729b6ca413092,
+    - target: {fileID: 6183133552220493312, guid: 86431d44920f5c647a4729b6ca413092,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: _active
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6183133552348685018, guid: 86431d44920f5c647a4729b6ca413092,
+    - target: {fileID: 6183133552220493318, guid: 86431d44920f5c647a4729b6ca413092,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1964,6 +1964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183133552348685018, guid: 86431d44920f5c647a4729b6ca413092,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86431d44920f5c647a4729b6ca413092, type: 3}

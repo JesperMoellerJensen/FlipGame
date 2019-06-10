@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Activateable : MonoBehaviour
 {
-	public virtual void SetActive(bool active)
+	public virtual void ToggleActive()
 	{
 	}
 }

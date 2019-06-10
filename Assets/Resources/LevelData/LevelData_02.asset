@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8ccb57b0d97ab4e847fdf5937e6278, type: 3}
   m_Name: LevelData_02
   m_EditorClassIdentifier: 
-  RequiredCoins: 0
-  Completed: 1
-  TotalCoins: 0
+  RequiredCoins: 1
+  Completed: 0
+  TotalCoins: 1
   CoinsCollected: 0
   FastestTime: 0
   FastestTimeAllCoins: 0

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite: {fileID: 949320164144638824}
-  Entities:
-  - {fileID: 0}
+  _active: 0
+  Entities: []
 --- !u!61 &949320164033093441
 BoxCollider2D:
   m_ObjectHideFlags: 0

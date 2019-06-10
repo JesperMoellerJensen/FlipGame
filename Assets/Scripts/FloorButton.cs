@@ -37,7 +37,7 @@ public class FloorButton : MonoBehaviour
 		Invoke("Cooldown", 0.8f);
 		foreach (var entity in Entities)
 		{
-			entity.SetActive(_active);
+			entity.ToggleActive();
 		}
 
 		if (_active)

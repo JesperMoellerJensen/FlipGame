@@ -812,6 +812,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 09b9da7a7823b0d4c95333f9fa8fc704, type: 2}
   - {fileID: 11400000, guid: ccc574d5754dd004a82c78827e6f44be, type: 2}
   - {fileID: 11400000, guid: a372b50b71e0c994a9238cda7e9f340c, type: 2}
+  - {fileID: 11400000, guid: 566f25576af41ce41932b9deb08f24ad, type: 2}
+  - {fileID: 11400000, guid: 0fdbf3e5ab6fdf4468c1fa5d58cb3b80, type: 2}
+  - {fileID: 11400000, guid: 708677bcfac91c64eb8b21c29d014382, type: 2}
+  - {fileID: 11400000, guid: ffb408bb8b41e5f4a8a552adeb21b865, type: 2}
+  - {fileID: 11400000, guid: c76f530462c43f74fa2104c61ee79a35, type: 2}
+  - {fileID: 11400000, guid: aa48ecad752e55f45be08778d367bcde, type: 2}
   TotalCoinsInGame: 0
   TotalCollectedCoins: 0
 --- !u!1 &896322128
@@ -1614,7 +1620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79eda5da1eec114d9f0c8aefea39f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetFramerate: 60
 --- !u!1 &1731497301
 GameObject:
   m_ObjectHideFlags: 0

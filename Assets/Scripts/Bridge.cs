@@ -70,8 +70,8 @@ public class Bridge : Activateable
 		}
 	}
 
-	public override void SetActive(bool active)
+	public override void ToggleActive()
 	{
-		Active = active;
+		Active = !_active;
 	}
 }
