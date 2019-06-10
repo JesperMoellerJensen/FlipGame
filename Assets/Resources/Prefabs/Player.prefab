@@ -143,10 +143,11 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 12544
-  Sprite: {fileID: 2095375925173585173}
+  ParentSprite: {fileID: 2095375925173585173}
   CanMove: 0
   _speed: 8
   _jumpForce: 15
+  _moveTilt: 5
 --- !u!50 &2821441701926648456
 Rigidbody2D:
   serializedVersion: 4

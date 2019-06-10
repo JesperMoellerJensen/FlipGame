@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour
 {
 	public List<AudioClip> AudioClips = new List<AudioClip>();
 	public LayerMask GroundMask;
-	public Transform Sprite;
+	public Transform ParentSprite;
 	public bool CanMove;
 
 	[SerializeField] private float _speed;
 	[SerializeField] private float _jumpForce;
+	[SerializeField] private float _moveTilt;
 
 	private Rigidbody2D _body;
 	private Animator _animator;
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate()
 	{
 		_body.velocity = new Vector2(_moveDir * _speed, _body.velocity.y);
+		ParentSprite.rotation = Quaternion.Euler(new Vector3(0, 0, _moveDir * _moveTilt * _gravityDir * -1));
 		CheckIfOnGround();
 	}
 
@@ -66,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 		_body.velocity = new Vector2(_body.velocity.x, InVelY);
 		_gravityDir *= -1;
 		_body.gravityScale *= -1;
-		Sprite.up = Sprite.up *-1;
+		ParentSprite.up = ParentSprite.up * -1;
 	}
 	private void Jump()
 	{
