@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
 {
 	public List<AudioClip> AudioClips = new List<AudioClip>();
 	public LayerMask GroundMask;
+	public Transform Sprite;
 	public bool CanMove;
 
 	[SerializeField] private float _speed;
 	[SerializeField] private float _jumpForce;
 
 	private Rigidbody2D _body;
+	private Animator _animator;
 	private float _moveDir;
 	private int _gravityDir = 1;
 
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{
 		_body = GetComponent<Rigidbody2D>();
+		_animator = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -63,10 +66,11 @@ public class PlayerMovement : MonoBehaviour
 		_body.velocity = new Vector2(_body.velocity.x, InVelY);
 		_gravityDir *= -1;
 		_body.gravityScale *= -1;
-
+		Sprite.up = Sprite.up *-1;
 	}
 	private void Jump()
 	{
+		_animator.SetTrigger("Jump");
 		_body.velocity = new Vector2(_body.velocity.x, _jumpForce * _gravityDir);
 	}
 

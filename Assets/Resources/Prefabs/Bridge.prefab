@@ -67,9 +67,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: acb43483c70346748851de2fb91550c2, type: 3}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 0.16078432, g: 0.16078432, b: 0.16078432, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,8 +130,9 @@ MonoBehaviour:
     m_Bits: 256
   Sprite: {fileID: 6183133552348685013}
   BridgeHeight: 1
+  ActivationSpeed: 80
   InvertDirecition: 1
-  _active: 0
+  _active: 1
 --- !u!61 &6183133552220493318
 BoxCollider2D:
   m_ObjectHideFlags: 0
