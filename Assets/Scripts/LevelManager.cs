@@ -11,9 +11,6 @@ public class LevelManager : MonoBehaviour
 	public int CurrentCoins = 0;
 	public long TimeElapsed;
 
-
-
-
 	private TextMeshProUGUI _timerText;
 	private TextMeshProUGUI _coinCounterText;
 	private Stopwatch _stopwatch;

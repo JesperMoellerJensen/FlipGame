@@ -13,9 +13,9 @@ public class LevelSpawn : MonoBehaviour
 	private void SpawnPlayer()
 	{
 		var prefab = Resources.Load<GameObject>("Prefabs/Player");
-		GameObject player = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
-		FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
+        GameObject player = Instantiate(prefab, transform.position, Quaternion.identity);
 
+		FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
 		FindObjectOfType<LevelManager>().InitializeLevel();
 	}
 }
